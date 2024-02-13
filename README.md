@@ -12,12 +12,12 @@ This repository contains the code for the SPOC Meeting Connect project. The proj
 * Clone the repo
 * Create a Google Cloud Platform project & Enable the Google Calendar API
 * Make sure that your user has API Access to perform Google Calendar API calls
-* Run the script
+* Download the credentials.json file & place it in the root of the project
 * Create a virtual environment & Install the requirements
 - `python3 -m venv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
-- export the environment variables
+- export the environment variables as given below
 - `python3 main.py`
 * The script will open a link in the browser
 * Select the Google account that you want to use to create the events & Allow the permissions

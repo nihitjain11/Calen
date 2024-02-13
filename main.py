@@ -50,8 +50,8 @@ def generate_timestamps():
     date_range = DATES if DATES else range(START_DATE,END_DATE+1,STEP_DATE)
     for DATE in date_range:
         for TIME in range(START_TIME,END_TIME,STEP_TIME):
-            start = datetime.datetime.now().replace(day=DATE, month=MONTH, hour=TIME//60, minute=TIME%60, second=0)
-            end = start + datetime.timedelta(minutes=10)
+            start = datetime.datetime.now().replace(day=int(DATE), month=MONTH, hour=TIME//60, minute=TIME%60, second=0)
+            end = start + datetime.timedelta(minutes=STEP_TIME)
 
             timestamps.append([start.isoformat(timespec='seconds')+TZ,end.isoformat(timespec='seconds')+TZ])
     # print(timestamps)
@@ -141,8 +141,7 @@ def main():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
