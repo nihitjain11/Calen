@@ -1,10 +1,10 @@
-export ORGANIZER_EMAIL="nihit.jain@tothenew.com"
-export SPOC_EMAILS=['anmol.anand@tothenew.com'] #[list of emails]
-export ATTENDEES_EMAILS_LIST=['pooja.bisht@tothenew.com','vansh.raj@tothenew.com'] # [list of emails]
+export ORGANIZER_EMAIL="nihit.jain@ttn.com"
+export SPOC_EMAILS=['a.a@ttn.com'] #[list of emails]
+export ATTENDEES_EMAILS_LIST=['p.b@ttn.com','v.r@ttn.com'] # [list of emails]
 
 export SEND_NOTIFICATIONS=True #False
 
-export DESCRIPTION="""<h3>Monthly meet-up with Americas BU SPOC</h3>
+export DESCRIPTION="""<h3>Monthly meet-up with A BU SPOC</h3>
 - Current Status
 - Updates in Roles & responsibilities
 - Contributions made
